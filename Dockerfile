@@ -15,6 +15,7 @@ EXPOSE 8080
 CMD /usr/share/tomcat9/bin/catalina.sh start
 
 
+
 #FROM tomcat:latest
 #RUN apt update && apt dist-upgrade -y
 #RUN apt install git -y
