@@ -1,5 +1,7 @@
 FROM ubuntu:20.04
-RUN apt update
+ENV TZ=Europe/Moscow
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+RUN apt update && apt dist-upgrade -y
 RUN apt install git -y
 RUN apt install default-jdk -y
 RUN apt install maven -y
