@@ -15,6 +15,7 @@ EXPOSE 8080
 RUN mkdir /var/lib/tomcat9/logs && touch /var/lib/tomcat9/logs/catalina.out
 CMD /usr/share/tomcat9/bin/catalina.sh start
 
+
 #FROM tomcat:latest
 #RUN apt update && apt dist-upgrade -y
 #RUN apt install git -y
