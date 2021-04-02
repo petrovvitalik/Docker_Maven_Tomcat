@@ -12,7 +12,8 @@ RUN cd /boxfuse-sample-java-war-hello && mvn package
 RUN rm -rf /var/lib/tomcat/webapps/*
 RUN cp /boxfuse-sample-java-war-hello/target/hello-1.0.war /var/lib/tomcat9/webapps/
 EXPOSE 8080
-CMD /usr/share/tomcat9/bin/catalina.sh start && tail -f /var/lib/tomcat9/logs/catalina.out
+RUN touch /var/lib/tomcat9/logs/catalina.out
+CMD /usr/share/tomcat9/bin/catalina.sh start
 
 #FROM tomcat:latest
 #RUN apt update && apt dist-upgrade -y
