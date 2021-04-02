@@ -2,6 +2,7 @@ FROM ubuntu:20.04
 ENV TZ=Europe/Moscow
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN apt update && apt dist-upgrade -y
+RUN apt install mlocate
 RUN apt install git -y
 RUN apt install default-jdk -y
 RUN apt install maven -y
@@ -11,7 +12,10 @@ RUN cd /boxfuse-sample-java-war-hello && mvn package
 RUN rm -rf /var/lib/tomcat/webapps/*
 RUN cp /boxfuse-sample-java-war-hello/target/hello-1.0.war /var/lib/tomcat9/webapps/
 EXPOSE 8080
-CMD /bin/catalina.sh start
+RUN ls /
+RUN ls /home/
+RUN ls /var/lib/tomcat9/
+RUN locate catalina.sh
 
 #FROM tomcat:latest
 #RUN apt update && apt dist-upgrade -y
