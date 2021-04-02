@@ -1,4 +1,4 @@
-FROM ubuntu:20:04
+FROM ubuntu:20.04
 RUN apt update && apt dist-upgrade -y
 RUN apt install git -y
 RUN apt install default-jdk -y
