@@ -9,4 +9,4 @@ RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
 RUN mvn -f "/boxfuse-sample-java-war-hello/pom.xml" package
 RUN cp /boxfuse-sample-java-war-hello/target/*.war /var/lib/tomcat9/webapps/
 EXPOSE 8080
-CMD service tomcat7 start
+CMD service tomcat9 start && tail -f /var/lib/tomcat7/logs/catalina.out
