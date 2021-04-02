@@ -1,6 +1,4 @@
 FROM tomcat:latest
-RUN ls /var/lib/
-RUN ls /var/lib/tomcat9/
 RUN apt update && apt dist-upgrade -y
 RUN apt install git -y
 RUN apt install maven -y
