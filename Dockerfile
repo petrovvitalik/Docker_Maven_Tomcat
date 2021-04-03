@@ -13,7 +13,7 @@ RUN rm -rf /var/lib/tomcat/webapps/*
 RUN cp /boxfuse-sample-java-war-hello/target/hello-1.0.war /var/lib/tomcat9/webapps/
 EXPOSE 8080
 RUN chmod 777 -R /usr/share/tomcat9
-CMD /usr/share/tomcat9/bin/catalina.sh start
+CMD ["/usr/share/tomcat9/bin/catalina.sh", "start"]
 
 
 
