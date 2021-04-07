@@ -1,4 +1,4 @@
-FROM tomcat:10.0.5-slim
+FROM tomcat:10.0.5-jdk16-openjdk-slim-buster
 RUN apt update && apt dist-upgrade -y
 RUN apt install git -y
 RUN apt install maven -y
