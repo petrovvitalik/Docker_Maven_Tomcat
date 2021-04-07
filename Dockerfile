@@ -1,4 +1,4 @@
-FROM tomcat:latest-slim
+FROM tomcat:10.0.5-slim
 RUN apt update && apt dist-upgrade -y
 RUN apt install git -y
 RUN apt install maven -y
